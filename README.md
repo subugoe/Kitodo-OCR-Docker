@@ -8,6 +8,7 @@ In this version, the provided Example of workflow is modified to support Operand
 
 
 ## Quick Startup 
-`./run.sh`
+### Set `OPERANDI_USER_PASS="operandi_username:operandi_password"` and `OLA_USR="ola_hd_username:ola_hd_password"` values in the .env file
+### Then `./run.sh`
 
 Kitodo Production can be accessed at http://localhost:8080/kitodo with initial credentials `testAdmin / test`

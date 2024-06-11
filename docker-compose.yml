@@ -29,6 +29,8 @@ services:
     environment:
       - DB_ADDR=db
       - ELASTIC_ADDR=elastic
+    env_file:
+      - .env
     volumes:
       - ./config:/usr/local/kitodo
     depends_on:
