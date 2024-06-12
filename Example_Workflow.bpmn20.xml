@@ -30,11 +30,11 @@
     <bpmn2:sequenceFlow id="SequenceFlow_047pp8w" sourceRef="Task_4" targetRef="Task_1wd2ukc" />
     <bpmn2:sequenceFlow id="SequenceFlow_11oku61" sourceRef="Task_1wd2ukc" targetRef="Task_0wlbkk7" />
     <bpmn2:sequenceFlow id="SequenceFlow_043q4um" sourceRef="Task_0wlbkk7" targetRef="EndEvent_1r20d3t" />
-    <bpmn2:scriptTask id="Task_0wlbkk7" name="OLA-HD" template:permittedUserRole="1" template:scriptName="OLA-HD Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/upload_to_ola_hd.sh /usr/local/kitodo/metadata/(processid)/OCR_results.zip">
+    <bpmn2:scriptTask id="Task_0wlbkk7" name="OLA-HD" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="OLA-HD Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/upload_to_ola_hd.sh /usr/local/kitodo/metadata/(processid)/workspace_results.zip">
       <bpmn2:incoming>SequenceFlow_11oku61</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_043q4um</bpmn2:outgoing>
     </bpmn2:scriptTask>
-    <bpmn2:scriptTask id="Task_1wd2ukc" name="Operandi(OCR)" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="Operandi Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/script.sh -e -w /usr/local/kitodo/metadata/(processid)/OCR -m &#60;mets_url&#62;">
+    <bpmn2:scriptTask id="Task_1wd2ukc" name="Operandi(OCR)" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="Operandi Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/script.sh -e -w /usr/local/kitodo/metadata/(processid)/workspace -m &#60;mets_url&#62;">
       <bpmn2:incoming>SequenceFlow_047pp8w</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_11oku61</bpmn2:outgoing>
     </bpmn2:scriptTask>

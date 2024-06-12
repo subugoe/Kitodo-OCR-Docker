@@ -31,6 +31,7 @@ log "Setting permissions and fixing line endings for scripts..."
 chmod 777 "${KITODO_HOME}/scripts/"*
 
 git clone https://github.com/subugoe/Operandi-Integration-Script.git "${KITODO_HOME}/Operandi-Integration-Script"
+chmod 777 "${KITODO_HOME}/Operandi-Integration-Script/"*
 mv /Example_Workflow.* "${KITODO_HOME}/diagrams/"
 
 # Run CMD
