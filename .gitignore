@@ -1,2 +1,7 @@
 .env
 .history
+config
+database
+elastic
+test
+ocrd

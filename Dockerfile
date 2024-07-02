@@ -20,6 +20,7 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 
 WORKDIR /tmp
 RUN  apt-get -q update \
+  && apt-get install -y docker.io \
   && apt-get -q install -y --no-install-recommends unzip git mariadb-client \
   && rm -rf /var/lib/apt/lists/* \
   && wget -q https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-${KITODO_VERSION}/kitodo-production-${KITODO_VERSION}-config.zip -O kitodo_config.zip \
