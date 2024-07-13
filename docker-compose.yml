@@ -1,7 +1,7 @@
-version: '3'
+version: '3.6.3'
 services:
   db:
-    image: mariadb:10.3
+    image: mariadb:11.2.4
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=kitodo
@@ -10,11 +10,13 @@ services:
     volumes:
       - ./database:/var/lib/mysql
   elastic:
-    image: elasticsearch:5-alpine
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.22
     environment:
       - cluster.name=kitodo
       - node.name=kitodo-1
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.seed_hosts=kitodo-1
+      - cluster.initial_master_nodes=kitodo-1
     volumes:
       - ./elastic:/usr/share/elasticsearch/data
   main:
@@ -23,7 +25,7 @@ services:
       dockerfile: Dockerfile
       args:
         - KITODO_VERSION=${KITODO_VERSION}
-    image: docker.io/kitodo/production:${KITODO_VERSION}
+    image: kitodo/production:${KITODO_VERSION}
     ports:
       - "127.0.0.1:8080:8080"
     environment:
