@@ -27,7 +27,7 @@
       <bpmn2:incoming>Flow_1hmtbdx</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="Flow_0oscx9v" sourceRef="Task_2" targetRef="Activity_0osxv2m" />
-    <bpmn2:scriptTask id="Activity_0osxv2m" name="Operandi(OCR)" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="Operandi Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/kitodo_operandi.sh -w /usr/local/kitodo/metadata/(processid)/(processtitle)">
+    <bpmn2:scriptTask id="Activity_0osxv2m" name="Operandi(OCR)" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="Operandi Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/kitodo_operandi.sh -w (processpath)/(processtitle) -i (origpath)">
       <bpmn2:incoming>Flow_0oscx9v</bpmn2:incoming>
       <bpmn2:outgoing>Flow_09a3h7b</bpmn2:outgoing>
     </bpmn2:scriptTask>
