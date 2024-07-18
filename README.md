@@ -11,6 +11,11 @@ OCR-D is supported locally and on HPC servers using Operandi project: https://gi
 
 To use the OCR-D local processing `-l` flag must be added to Operandi(OCR) step in the workflow. To understand more, please read https://github.com/subugoe/Operandi-Integration-Script/
 
+## Project Folder Structure
+The project folder structure should contain at least following sub-folders:
+<img width="1420" alt="Screenshot 2024-07-14 at 17 13 43" src="https://github.com/user-attachments/assets/02729328-2f8b-46d9-a6d5-8f279a4a62cc">
+, where `images/master_(processtitle)_media` is the main images directory and `ocr/alto` is the OCR-D results directory. Thus, the Operandi(OCR) step needs those 2 paths to work. 
+Also, any other file group sub-folder is optional and up to the user to decide.
 
 ## Quick Startup 
 * Set `OPERANDI_USER_PASS="operandi_username:operandi_password"` and `OLA_USR="ola_hd_username:ola_hd_password"` values in the .env file
