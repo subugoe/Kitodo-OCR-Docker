@@ -34,7 +34,7 @@
     <bpmn2:sequenceFlow id="Flow_09a3h7b" sourceRef="Activity_0osxv2m" targetRef="Task_3" />
     <bpmn2:sequenceFlow id="Flow_1ywetqk" sourceRef="Task_4" targetRef="Activity_0l3qxu0" />
     <bpmn2:sequenceFlow id="Flow_1hmtbdx" sourceRef="Activity_0l3qxu0" targetRef="EndEvent_1r20d3t" />
-    <bpmn2:scriptTask id="Activity_0l3qxu0" name="OLA-HD" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="OLA-HD Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/upload_to_ola_hd.sh /usr/local/kitodo/metadata/(processid)">
+    <bpmn2:scriptTask id="Activity_0l3qxu0" name="OLA-HD" template:permittedUserRole="1" template:typeAutomatic="true" template:scriptName="OLA-HD Script" template:scriptPath="/usr/local/kitodo/Operandi-Integration-Script/upload_to_ola_hd.sh -w (processpath)/(processtitle) -m https://gdz.sub.uni-goettingen.de/mets/(processtitle).mets.xml">
       <bpmn2:incoming>Flow_1ywetqk</bpmn2:incoming>
       <bpmn2:outgoing>Flow_1hmtbdx</bpmn2:outgoing>
     </bpmn2:scriptTask>
