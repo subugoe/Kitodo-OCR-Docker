@@ -1,5 +1,5 @@
 # Kitodo-OCR-Docker 
-This project creates a docker image for Kitodo Production 3.6.3 and attach OCR-D maximum image to it for the OCR step.
+This project creates a docker image for Kitodo Production 3.7.1 and attach OCR-D maximum image to it for the OCR step.
 
 
 In this version, the provided Example of workflow is modified to support Operandi-Integration-Script: https://github.com/subugoe/Operandi-Integration-Script/

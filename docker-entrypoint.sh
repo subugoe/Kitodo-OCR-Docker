@@ -24,7 +24,7 @@ echo "SELECT 1 FROM user LIMIT 1;" \
     || mysql -h "${DB_ADDR}" -P "${DB_PORT}" -u kitodo --password=kitodo kitodo < /tmp/kitodo.sql
 
 git clone https://github.com/subugoe/Operandi-Integration-Script.git "${KITODO_HOME}/Operandi-Integration-Script"
-chmod 777 "${KITODO_HOME}/Operandi-Integration-Script/"*
+chmod 777 -R "${KITODO_HOME}/Operandi-Integration-Script/"*
 mv /Example_Workflow.* "${KITODO_HOME}/diagrams/"
 
 # Run CMD

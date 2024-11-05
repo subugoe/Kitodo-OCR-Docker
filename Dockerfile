@@ -3,8 +3,8 @@ FROM tomcat:9-jdk14
 
 # Set ARG and ENV for Kitodo
 ARG KITODO_HOME=/usr/local/kitodo
-ENV KITODO_VERSION="3.6.3"
-ENV KITODO_VERSION_="3-6-3"
+ENV KITODO_VERSION="3.7.1"
+ENV KITODO_VERSION_="3-7-1"
 
 ENV KITODO_HOME ${KITODO_HOME}
 ENV KITODO_VERSION ${KITODO_VERSION}
@@ -30,7 +30,6 @@ RUN apt-get -q update \
   && apt-get install -y docker.io \
   && apt-get -q install -y --no-install-recommends zip wget git curl mariadb-client unzip \
   && rm -rf /var/lib/apt/lists/*
-
 # Download Kitodo and configure Tomcat
 RUN wget -q https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-${KITODO_VERSION}/kitodo_${KITODO_VERSION_}_config_modules.zip -O kitodo_config.zip \
   && wget -q https://github.com/kitodo/kitodo-production/releases/download/kitodo-production-${KITODO_VERSION}/kitodo_${KITODO_VERSION_}.sql -O kitodo.sql \
